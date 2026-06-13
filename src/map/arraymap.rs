@@ -35,7 +35,11 @@ pub fn move_down(map: &mut [[&str; 5]; 5], row: &mut usize, column: &mut usize) 
 }
 
 pub fn move_right(map: &mut [[&str; 5]; 5], row: &mut usize, column: &mut usize) {
-    if *column != 4{
+    if  *column == 3 {
+        map[*row][*column] = "* ";
+        *column += 1;
+        map[*row][*column] = "x";
+    } else if *column != 4{
         map[*row][*column] = "* ";
         *column += 1;
         map[*row][*column] = "x ";
@@ -43,7 +47,11 @@ pub fn move_right(map: &mut [[&str; 5]; 5], row: &mut usize, column: &mut usize)
 }
 
 pub fn move_left(map: &mut [[&str; 5]; 5], row: &mut usize, column: &mut usize) {
-    if *column != 0{
+    if *column == 4{
+        map[*row][*column] = "*";
+        *column -= 1;
+        map[*row][*column] = "x ";
+    } else if *column != 0{
         map[*row][*column] = "* ";
         *column -= 1;
         map[*row][*column] = "x ";
