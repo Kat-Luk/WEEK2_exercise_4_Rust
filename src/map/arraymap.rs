@@ -19,7 +19,7 @@ pub fn print_map(map: &mut [[&str; 5]; 5]) {
 }
 
 pub fn move_up(map: &mut [[&str; 5]; 5], row: &mut usize, column: &mut usize) {
-    if *row != 0 && column == 4{
+    if *row != 0 && *column == 4{
         map[*row][*column] = "*";
         *row -= 1;
         map[*row][*column] = "x";
@@ -31,7 +31,7 @@ pub fn move_up(map: &mut [[&str; 5]; 5], row: &mut usize, column: &mut usize) {
 }
 
 pub fn move_down(map: &mut [[&str; 5]; 5], row: &mut usize, column: &mut usize) {
-    if *row != 4 && column == 4 {
+    if *row != 4 && *column == 4 {
         map[*row][*column] = "*";
         *row += 1;
         map[*row][*column] = "x";
