@@ -3,7 +3,7 @@ use std::io;
 use crate::map::arraymap::*;
 fn main() {
     let mut row: usize = 2;
-    let mut column: usize = 2;
+    let mut column: usize = 4;
     let mut map = create_map();
     print_map(&mut map); 
     loop {
